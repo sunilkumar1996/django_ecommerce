@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %} Login Page {% endblock title %}
+{% block title %} Register Page {% endblock title %}
 
 {% block content %}
 
@@ -13,7 +13,7 @@
         <!-- row -->
         <div class="row">
             <div class="col-md-12">
-                <h3 class="breadcrumb-header">Login Page</h3>
+                <h3 class="breadcrumb-header">Register Page</h3>
                 <ul class="breadcrumb-tree">
                     <li><a href="{% url 'home' %}">Home</a></li>
                     <li class="active">Login</li>
@@ -35,9 +35,9 @@
                 <form method="POST">
                     {% csrf_token %}
                     {{ form.as_p }}
-                    <button type="submit" class="btn btn-danger"> Login </button>
+                    <button type="submit" class="btn btn-danger"> Register </button>
                 </form>
-                <p>You Don't have a account => <a href="{% url 'register' %}">Click Here</a></p>
+                <p>You alredy have a account => <a href="{% url 'login' %}">Click Here</a></p>
 				</div>
 				<!-- /row -->
 			</div>
